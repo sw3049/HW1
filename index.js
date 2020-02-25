@@ -24,14 +24,14 @@ const demo = async () => {
   status('');
 
   // Make a prediction through the locally hosted cat.jpg.
-  const pElement = document.getElementById('pegasus');
-  if (pElement.complete && pElement.naturalHeight !== 0) {
-    predict(pElement);
-    pElement.style.display = '';
+  const catElement = document.getElementById('cat');
+  if (catElement.complete && catElement.naturalHeight !== 0) {
+    predict(catElement);
+    catElement.style.display = '';
   } else {
-    pElement.onload = () => {
-      predict(pElement);
-      pElement.style.display = '';
+    catElement.onload = () => {
+      predict(catElement);
+      catElement.style.display = '';
     }
   }
 
